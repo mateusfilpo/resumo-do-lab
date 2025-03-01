@@ -46,3 +46,65 @@ O **Modelo de Responsabilidade Compartilhada** define quais partes da segurança
 - **Exemplo**: Microsoft 365, Google Workspace, Dropbox.  
 
 Esse modelo permite que as empresas escolham o nível de controle e gerenciamento que desejam manter, equilibrando flexibilidade, facilidade de uso e segurança.  
+
+
+# Componentes de Arquitetura do Azure  
+
+## Regiões  
+- Compostas por um ou mais datacenters muito próximos.  
+- Fornecem flexibilidade e escala para reduzir a latência do cliente.  
+- Preservam a residência dos dados com uma ampla oferta de conformidade.  
+
+## Zonas de Disponibilidade  
+- Protegem contra tempo de inatividade devido a falha de datacenter.  
+- Datacenters fisicamente separados dentro da mesma região.  
+- Cada datacenter possui alimentação, resfriamento e redes independentes.  
+
+## Pares de Regiões  
+- Mínimo de **300 milhas** de separação entre pares de regiões.  
+- Replicação automática para alguns serviços.  
+- Prioridade na recuperação em caso de interrupção.  
+- Atualizações distribuídas sequencialmente para minimizar tempo de inatividade.  
+
+## Regiões Soberanas do Azure  
+
+### Serviços Governamentais dos EUA  
+- Atendem às exigências de segurança e conformidade de agências federais, governos estaduais e locais dos EUA, além de seus provedores de soluções.  
+
+### Azure Governamental  
+- Instância separada do Azure.  
+- Fisicamente isolado de implantações que não sejam do governo dos EUA.  
+- Acessível apenas a pessoal verificado e autorizado.  
+
+### Azure China  
+- A Microsoft é o primeiro provedor estrangeiro de serviços de nuvem pública da China, em conformidade com regulamentações governamentais.  
+- Instância fisicamente separada dos serviços do Azure, operada pela **21Vianet**.  
+- Todos os dados permanecem dentro da China para garantir conformidade.  
+
+## Recursos do Azure  
+Os recursos do Azure são componentes essenciais para a criação de soluções na nuvem, como:  
+- **Máquinas Virtuais**  
+- **Contas de Armazenamento**  
+- **Redes Virtuais**  
+- **Serviços de Aplicativos**  
+- **Banco de Dados SQL**  
+- **Funções (Azure Functions)**  
+
+## Grupos de Recursos  
+- Contêiner usado para gerenciar e agregar recursos em uma única unidade.  
+- Um recurso pode existir em **apenas um grupo de recursos**.  
+- Recursos podem ser distribuídos em diferentes regiões.  
+- Recursos podem ser **movidos** entre grupos de recursos.  
+- Aplicações podem utilizar **múltiplos grupos de recursos**.  
+
+## Assinaturas do Azure  
+- Cada conta do Azure pode ter múltiplas assinaturas.  
+- Uma assinatura fornece **acesso autenticado e autorizado** aos recursos do Azure.  
+
+### Limites das Assinaturas  
+- **Limite de cobrança**: Relatórios de cobrança e faturas separados para cada assinatura.  
+- **Limite de controle de acesso**: Gerencia e controla quais recursos podem ser provisionados pelos usuários.  
+
+## Grupos de Gerenciamento  
+- Permitem incluir várias assinaturas do Azure.  
+- As assinaturas **herdam** as condições aplicadas ao grupo de gerenciamento.  
